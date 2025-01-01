@@ -16,7 +16,7 @@ graph TD
             Like java.lang, java.util,etc.]
         
         style A fill:#fff,color:#000
-        style JRE fill:#fff2b2,color:#000
+        style JRE fill:#fff,color:#000
         style B fill:#b7e892,color:#000
         style C fill:#ff9090,color:#000
         end
