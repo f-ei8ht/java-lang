@@ -20,7 +20,7 @@ graph TD
         style B fill:#b7e892,color:#000
         style C fill:#ff9090,color:#000
         end
-        style JDK fill:#dff2ff,color:#000
+        style JDK fill:#dff2ff,color:#000,width:670px,height:390px
     end
 ```
 
