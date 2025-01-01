@@ -5,4 +5,4 @@
 - Java is multi threaded
 - Java is distributed
 - WORA, platform independant (Write once run anywhere)
-- 
+  

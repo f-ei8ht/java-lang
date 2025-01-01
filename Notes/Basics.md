@@ -30,3 +30,28 @@ graph TD
 `JRE` : it is a part of JDK, but can be downloaded seprately. Provides libraries, the JVM, and other components to run application.
 
 `JVM` : its a part of JRE and is responsible for executing the bytecode. "WORA" capability. Not platform independent.
+
+
+## Print Statements
+- `print("one")` : prints is one line, uses no new line
+- `println("two")` : first prints then goes to a new line
+- `println()` : will print a new line
+
+For Example => 
+```java
+public class PrintStatement {
+    public static void main(String[] args) {
+        System.out.print("one");
+        System.out.println();
+        System.out.print("two");
+        System.out.println("three");
+        System.out.print("four");
+    }
+
+}
+```
+
+```bash
+one
+twothree
+four
