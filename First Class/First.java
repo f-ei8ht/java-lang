@@ -14,4 +14,4 @@ public class First { // public is a access specifier and public class First we c
 
 // compile the .java file using javac you will get a .class file which contains bytecode and run it using java
 // every statement must end with a semicolon
-// main method is most important i a java program because jvm looks for it to start execution
+// main method is most important in a java program because jvm looks for it to start execution
