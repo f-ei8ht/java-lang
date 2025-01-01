@@ -12,4 +12,4 @@ flowchart LR
     (javac) --- B["Bytecode 
     (.class)"] -- JVM
     (java) --- C["OS
-    (Native Code)"] --- D["Windows JVM"] & E["Linux JVM"] & F["MacOS JVM"]
+    (Native Code)"] .- D["Windows JVM"] & E["Linux JVM"] & F["MacOS JVM"]
