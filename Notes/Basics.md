@@ -1,10 +1,7 @@
 ## Files Extensions
-`.java[sourcecode]` and `.class [bytecode]`
+`.java [sourcecode]` and `.class [bytecode]`
 
 ## JDK VS JVM VS JRE
-JDK : it includes jre, interpreter/loader (java), javac
-javadoc
-
 
 ```mermaid
 graph TD
@@ -25,3 +22,11 @@ graph TD
         end
         style JDK fill:#dff2ff,color:#000
     end
+```
+
+
+#### `JDK` : it includes JRE, interpreter/loader (java), javac javadoc, and other tools needed for Java Development. Essentially, JDK is superset of JRE.
+
+#### `JRE` : it is a part of JDK, but can be downloaded seprately. Provides libraries, the JVM, and other components to run application.
+
+#### `JVM` : its a part of JRE and is responsible for executing the bytecode. "WORA" capability. Not platform independent.
