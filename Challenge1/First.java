@@ -1,7 +1,12 @@
 package Challenge1;
-
+import java.util.*;
 public class First {
     public static void main(String[] args) {
-        System.out.println("Good Morning!");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        String name = sc.nextLine();
+        System.out.println(name);
+        sc.close();
+        
     }
 }
