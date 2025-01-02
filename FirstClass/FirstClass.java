@@ -1,4 +1,6 @@
-public class First { // public is a access specifier and public class First we create a class 
+package FirstClass;
+
+public class FirstClass { // public is a access specifier and public class First we create a class 
     // if we add public before a class the class name and file name must be same along with case senstivity
     public static void main(String[] args) { // entry point for jvm
         // also we have command line arguments
