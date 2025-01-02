@@ -3,3 +3,4 @@
 - Robust : means strong, hence java is robust strong exception handling, type checking, strong memory management.
 - Multi-threaded : means the ability to execuate a lot of threads concurrently of CPU.
 - Distributed : good in communicating with network protocols.
+- JIT : just in time compiler

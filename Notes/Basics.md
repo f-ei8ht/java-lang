@@ -52,6 +52,14 @@ public class PrintStatement {
 ```
 
 ```bash
+$output
 one
 twothree
 four
+```
+
+## Importance of the main method
+- Enrty point : it's the entry point of a Java program,
+where the execution starts. JVM looks for main method.
+- public and static : main method must be accessible to jvm without needing to instantiate the class.
+- fix signature => public static void main(String[] args)
