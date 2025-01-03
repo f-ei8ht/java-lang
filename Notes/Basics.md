@@ -63,3 +63,15 @@ four
 where the execution starts. JVM looks for main method.
 - public and static : main method must be accessible to jvm without needing to instantiate the class.
 - fix signature => public static void main(String[] args)
+
+## What are variables?
+- Variables are like containers used for storing data values.
+```mermaid
+graph LR
+    A["int a = 5;"] .-> id1([5 => value of variable a]) & id2([a => name of the variable]) & id3([int => datatype])
+
+```
+- You can see here a variable `int a` has value `5`;
+- It has integer datatype [will discuss about this later]
+- For now integer has 4 bytes (32 bits) of size in java, so JVM will allocate 4 bytes for the variable a onto stack.
+- Variable name does not gets stored onto the stack.
