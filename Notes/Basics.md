@@ -75,7 +75,7 @@ graph LR
 - It has integer datatype [will discuss about this later]
 - For now integer has 4 bytes (32 bits) of size in java, so JVM will allocate 4 bytes for the variable a onto stack.
 - Variable name does not gets stored onto the stack.
-
+- There is a concept of address on the memory.
 
 ```mermaid
 
