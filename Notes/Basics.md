@@ -77,7 +77,7 @@ graph LR
 - Variable name does not gets stored onto the stack.
 - There is a concept of address on the memory.
 
-![Alt text](../Images/datatypes.png "Optional Title")
+![Data Types](../Images/datatypes.png "Data Types")
 
 
 
