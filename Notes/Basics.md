@@ -77,7 +77,24 @@ graph LR
 - Variable name does not gets stored onto the stack.
 - There is a concept of address on the memory.
 
+## Data Types
+
 ![Data Types](../Images/datatypes.png "Data Types")
+
+In the table above you can see different different types of datatypes that are used in java.
+
+```mermaid
+flowchart TB
+    id1(Java DataTypes) ---> A["Primitive Data Types"] & B["Non Primitive Data Types"]
+    A .-> C["Boolean"] & D["Numeric"]
+    B .-> E["strings"] & F["arrays"] & G["objects"]
+    C .-> H["boolean"]
+    D .-> I["Character"] & J["Integral"]
+    I .-> K["char"]
+    J .-> L["Integer"] & M["Floating Point"]
+    L .-> N["byte"] & O["short"] & P["int"] & Q["long"]
+    M .-> R["float"] & S["double"]
+
 
 
 
