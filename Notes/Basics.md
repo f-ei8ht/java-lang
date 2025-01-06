@@ -85,7 +85,7 @@ In the table above you can see different different types of datatypes that are u
 
 ```mermaid
 flowchart TB
-    id1(Java DataTypes) ---> A["Primitive Data Types"] & B["Non Primitive Data Types"]
+    id1(Java DataTypes) ---> A["Primitive Data Types"] & B["Non-Primitive Data Types"]
     A .-> C["Boolean"] & D["Numeric"]
     B .-> E["strings"] & F["arrays"] & G["objects"]
     C .-> H["boolean"]
@@ -94,6 +94,8 @@ flowchart TB
     J .-> L["Integer"] & M["Floating Point"]
     L .-> N["byte"] & O["short"] & P["int"] & Q["long"]
     M .-> R["float"] & S["double"]
+```
+In the above mermaid diagram you can have an overview of `Primitive` and `Non-Primitive` data types.
 
 
 
