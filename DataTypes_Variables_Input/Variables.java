@@ -20,7 +20,7 @@ public class Variables{
         String wishes = "Good morning";
         System.out.println(wishes); // double quotes for string
 
-        char s = 's';
-        System.out.println(s); // single quotes for character;
+        char tot123 = 's';
+        System.out.println(tot123); // single quotes for character;
     }
 }

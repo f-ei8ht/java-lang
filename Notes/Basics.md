@@ -97,6 +97,30 @@ flowchart TB
 ```
 In the above mermaid diagram you can have an overview of `Primitive` and `Non-Primitive` data types.
 
+## Naming Conventions
+### camelCase
+- Start with a lowercase letter. Capitalize the first letter of each subsequent word.
+- Example => `myVariableName`
+
+### snake_case
+- Start with an lowercase letter. Separate words with underscore.
+- Example: `my_variable_name`
+
+### kebab-case
+- All lowercase letters. Separate words with hypens.
+- Example : `my-variable-name`
+
+Keep a good and short name, choose names that are descriptive but not too long. It should be make the variable's purpose understandable.
+
+## Identifier Rules in Java 
+1. The only allowed characters for identifiers are all alphanumeric characters([A-Z], [a-z], [0-9]), '$' (dollar sign) and '_' (underscore).
+2. Can't use keywords or reserve words.
+3. Identifiers should not start with digits([0-9]).
+4. Java identifiers are case-sensitive.
+5. There is no limit on the length of the identifier but it is advisable to use an optimum length of 4 - 15 letters only.
+6. Example => 
+###
+![Identifers Valid/Invalid](../Images/identifiers_valid_invalid.png "Identifiers Valid/Invalid")
 
 
 
