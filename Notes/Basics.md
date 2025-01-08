@@ -122,7 +122,13 @@ Keep a good and short name, choose names that are descriptive but not too long. 
 ###
 ![Identifers Valid/Invalid](../Images/identifiers_valid_invalid.png "Identifiers Valid/Invalid")
 
-
+## Literals
+- Integer literals => 10, 5, -8 etc ..
+- Floating-point literals => 1.2, 0.25, -1.999, etc...
+- Boolean literals => true, false
+- Character literals => 'a', 'A', 'N', 'q', etc...
+- String literals => "hi", "hello", "what's up?"
+- Values that the varibales hold are called literals.
 
 
 
