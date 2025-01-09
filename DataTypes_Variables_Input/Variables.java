@@ -21,6 +21,9 @@ public class Variables{
         System.out.println(wishes); // double quotes for string
 
         char tot123 = 's';
-        System.out.println(tot123); // single quotes for character;
+        System.out.println(tot123);
+        
+        int _$_ = 1; // valid 
+        // single quotes for character;
     }
 }
