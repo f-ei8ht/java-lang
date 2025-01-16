@@ -130,5 +130,6 @@ Keep a good and short name, choose names that are descriptive but not too long. 
 - String literals => "hi", "hello", "what's up?"
 - Values that the varibales hold are called literals.
 
-
+## Keywords
+There are 50 keywords in java
 
