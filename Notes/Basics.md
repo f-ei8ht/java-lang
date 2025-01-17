@@ -151,4 +151,18 @@ Here is a list of keywords in the Java programming language. You cannot use any 
 \*\*\* added in 1.4  
 \*\*\*\* added in 5.0
 
-Go to this page for more information => [Keywords.md](keywords.md)
+Go to this page for more information => [Keywords.md](Keywords.md)
+
+## Escape Sequence
+
+| Escape Sequence | Description                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------- |
+| `\t`            | Inserts a horizontal tab space in the string, typically equivalent to a few spaces.          |
+| `\'`            | Inserts a single quote character in the text at this point.                                  |
+| `\"`            | Includes a double quote character within a string enclosed by double quotes.                 |
+| `\r`            | Inserts a carriage return in the text at this point.                                         |
+| `\\`            | Represents a single backslash in the string.                                                 |
+| `\n`            | Inserts a new line in the string, causing subsequent characters to be printed on a new line. |
+| `\f`            | Inserts a form feed in the text at this point.                                               |
+| `\b`            | Represents the backspace control character, moving the cursor one position backwards.        |
+
