@@ -166,3 +166,4 @@ Go to this page for more information => [Keywords.md](Keywords.md)
 | `\f`            | Inserts a form feed in the text at this point.                                               |
 | `\b`            | Represents the backspace control character, moving the cursor one position backwards.        |
 
+## User Input
