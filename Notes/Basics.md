@@ -167,3 +167,26 @@ Go to this page for more information => [Keywords.md](Keywords.md)
 | `\b`            | Represents the backspace control character, moving the cursor one position backwards.        |
 
 ## User Input
+- Scanner class
+- Buffer reader
+- Command line arguments
+- Console class
+- File reader
+- Object Input Stream
+- Properties
+- Data Input Stream
+
+Scanner class =>
+| Method           |
+| ---------------- |
+| next()           |
+| nextLine()       |
+| nextInt()        |
+| nextDouble()     |
+| nextBoolean()    |
+| nextByte()       |
+| nextShort()      |
+| nextLong()       |
+| nextFloat()      |
+| nextBigInteger() |
+| nextBigDecimal() |
