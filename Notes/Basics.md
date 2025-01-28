@@ -200,3 +200,10 @@ Automatic Type Conversion
 flowchart LR
 A["byte"] --> B["short"] --> C["int"] --> D["long"] --> E["float"] --> F["double"]
 ```
+
+Narrowing
+(explicit)
+```mermaid
+flowchart RL
+A["byte"] --> B["short"] --> C["int"] --> D["long"] --> E["float"] --> F["double"]
+```
