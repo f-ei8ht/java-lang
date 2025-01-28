@@ -190,3 +190,13 @@ Scanner class =>
 | nextFloat()      |
 | nextBigInteger() |
 | nextBigDecimal() |
+
+
+## Type Conversion
+
+Automatic Type Conversion
+(Widening - Implicit)
+```mermaid
+flowchart LR
+A["byte"] --> B["short"] --> C["int"] --> D["long"] --> E["float"] --> F["double"]
+```
