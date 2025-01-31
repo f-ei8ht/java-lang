@@ -195,14 +195,14 @@ Scanner class =>
 ## Type Conversion
 
 Automatic Type Conversion
-(Widening - Implicit)
+(Widening - Implicit - coercion)
 ```mermaid
 flowchart LR
 A["byte"] --> B["short"] --> C["int"] --> D["long"] --> E["float"] --> F["double"]
 ```
 
 Narrowing
-(explicit)
+(explicit - casting)
 ```mermaid
 flowchart RL
 A["byte"] --> B["short"] --> C["int"] --> D["long"] --> E["float"] --> F["double"]
