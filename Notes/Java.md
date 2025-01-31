@@ -16,11 +16,11 @@
 
 
 # Buzzwords
-- Bytecode : a verified code that is not human readable made by converting source code using java compiler which will then convert to machine code by jvm.
-- Robust : means strong, hence java is robust strong exception handling, type checking, strong memory management.
-- Multi-threaded : means the ability to execuate a lot of threads concurrently of CPU.
-- Distributed : good in communicating with network protocols.
-- JIT : just in time compiler
+1. Bytecode : a verified code that is not human readable made by converting source code using java compiler which will then convert to machine code by jvm.
+2. Robust : means strong, hence java is robust strong exception handling, type checking, strong memory management.
+3. Multi-threaded : means the ability to execuate a lot of threads concurrently of CPU.
+4. Distributed : good in communicating with network protocols.
+5. JIT : just in time compiler
   
   
 # How does java source code gets converted to machine code?
