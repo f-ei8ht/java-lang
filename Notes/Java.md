@@ -193,7 +193,7 @@ Here is a list of keywords in the Java programming language. You cannot use any 
 \*\*\* added in 1.4  
 \*\*\*\* added in 5.0
 
-Go to this page for more information => [Keywords.md](Keywords.md)
+Go to this md for more information => [Keywords.md](Keywords.md)
 
 ## Escape Sequence
 
