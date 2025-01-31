@@ -1,3 +1,45 @@
+# History of Java ☕
+- `James Gosling` , `Sun Microsystems`
+- first release 1995
+- previously called as `oak`
+- named after java islands because of their coffee beans
+
+
+# Features
+- Java is backward compatible
+- Java is robust
+- Java is oops based
+- Java is multi threaded
+- Java is distributed
+- WORA, platform independant (Write once run anywhere)
+- Java uses compiler and interpreter both (jvm -> interpret or jit compiled)
+
+
+# Buzzwords
+- Bytecode : a verified code that is not human readable made by converting source code using java compiler which will then convert to machine code by jvm.
+- Robust : means strong, hence java is robust strong exception handling, type checking, strong memory management.
+- Multi-threaded : means the ability to execuate a lot of threads concurrently of CPU.
+- Distributed : good in communicating with network protocols.
+- JIT : just in time compiler
+  
+  
+# How does java source code gets converted to machine code?
+Firstly the programmers writes the code on any text editor or IDE,
+then java compiler compiles the code to byte code which is intermediate code
+and is not human readable then the `JVM` converts the byte code to 
+machine code 0's and 1's.
+
+```mermaid
+flowchart LR
+    A["Source Code
+    (.java)"] 
+    -- Compiler
+    (javac) --- B["Bytecode 
+    (.class)"] -- JVM
+    (java) --- C["OS
+    (Native Code)"] .- D["Windows JVM"] & E["Linux JVM"] & F["MacOS JVM"]
+```
+
 ## Files Extensions
 `.java [sourcecode]` and `.class [bytecode]`
 
