@@ -1,11 +1,11 @@
-# History of Java ☕
+## History of Java ☕
 - `James Gosling` , `Sun Microsystems`
 - first release 1995
 - previously called as `oak`
 - named after java islands because of their coffee beans
 
 
-# Features
+## Features
 - Java is backward compatible
 - Java is robust
 - Java is oops based
@@ -15,7 +15,7 @@
 - Java uses compiler and interpreter both (jvm -> interpret or jit compiled)
 
 
-# Buzzwords
+## Buzzwords
 1. Bytecode : a verified code that is not human readable made by converting source code using java compiler which will then convert to machine code by jvm.
 2. Robust : means strong, hence java is robust strong exception handling, type checking, strong memory management.
 3. Multi-threaded : means the ability to execuate a lot of threads concurrently of CPU.
@@ -23,7 +23,7 @@
 5. JIT : just in time compiler
   
   
-# How does java source code gets converted to machine code?
+## How does java source code gets converted to machine code?
 Firstly the programmers writes the code on any text editor or IDE,
 then java compiler compiles the code to byte code which is intermediate code
 and is not human readable then the `JVM` converts the byte code to 
@@ -262,3 +262,12 @@ float eDec = (float) 3.4;
 long eBig  = (long) 3.4;
 int eInt = (int) 3.4;
 ```
+
+## Assignment operator
+Assigns the right hand operand's value to the left hand operand
+```java
+//example
+int a = 5;
+int b = a;
+```
+
