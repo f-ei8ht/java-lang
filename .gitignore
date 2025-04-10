@@ -2,7 +2,7 @@
 *.class
 
 # Ignore all .vscode folders anywhere in the project
-.vscode/
+!**/calculator/.vscode/
 
 # Optional: Ignore README.md in Calculator specifically
 /Calculator/calculator/README.md
