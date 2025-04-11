@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class App {
+public class Main {
 
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        App obj = new App();
+        Main obj = new Main();
 
         while (true) {
             System.out.println("Welcome to CLI Calculator\n");
