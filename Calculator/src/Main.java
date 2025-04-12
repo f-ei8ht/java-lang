@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -8,9 +9,10 @@ public class Main {
 
         Main obj = new Main();
 
+        System.out.println("Welcome to CLI Calculator");
+
         while (true) {
-            System.out.println("Welcome to CLI Calculator\n");
-            System.out.print("Please Enter an operation (+ , - , * , / , %): ");
+            System.out.print("\nPlease Enter an operation (+ , - , * , / , %): ");
             String input = sc.next();
 
             char inputOperation = '\0';
@@ -24,10 +26,10 @@ public class Main {
                 obj.calculate(inputOperation);
             }
 
-            System.out.println("want to continue or not y/n");
+            System.out.print("\nWant to continue or not y/n: ");
             char ch = sc.next().charAt(0);
             if (ch == 'n' || ch == 'N') {
-                System.out.println("Thanks you for using this calculator");
+                System.out.println("\nCalculation Ended");
                 break;
             }
         }
@@ -39,31 +41,49 @@ public class Main {
 
         switch (choice) {
             case '+':
-                System.out.print("\nHow many numbers you want to add:");
-                int addNums = sc.nextInt();
-                System.out.println("Enter the numbers");
-                int sum = 0;
-                for (int i = 0; i < addNums; i++) {
-                    int num = sc.nextInt();
-                    sum = sum + num;
+                while(true) {
+                    System.out.print("\nHow many numbers you want to add: ");
+                    if(sc.hasNextInt()) {
+                        int addNums = sc.nextInt();
+                        if(addNums > 1) {
+                            System.out.println("\nEnter the numbers: ");
+                            int sum = 0;
+                            for (int i = 0; i < addNums; i++) {
+                                while(!sc.hasNextInt()) {
+                                    System.out.println("Invalid. This is not an integer");
+                                    sc.next();
+                                }
+                                int num = sc.nextInt();
+                                sum += num;
+                            }
+                            System.out.println("Addition: " + sum);
+                            break;
+                        } else {
+                            System.out.println("\nPlease enter an integer greater than 1");
+                        }
+                    } else {
+                        System.out.println("\nThis is not a valid integer.");
+                        sc.next();
+                    }
                 }
-                System.out.println("Addition: " + sum);
                 break;
             case '-':
-                System.out.println("How many numbers you want to subtract \n");
+                System.out.print("\nHow many numbers you want to subtract: ");
                 int subNums = sc.nextInt();
-                System.out.println("Enter the numbers");
-                int sub = 0;
-                for (int i = 0; i < subNums; i++) {
-                    int num = sc.nextInt();
-                    sub = num - sub;
+                int[] subArray = new int[subNums];
+                if(subArray.length == 2) {
+                    System.out.println("\nEnter the numbers: ");
+                    for(int i = 0; i < subArray.length; i++) {
+                        subArray[i] = sc.nextInt();
+                    }
+                    System.out.println("Subtraction if, (a - b): " + (subArray[0] - subArray[1]));
+                    System.out.println("Subtraction if, (b - a): " + (subArray[1] - subArray[0]));
                 }
-                System.out.println("Substraction: " + sub);
                 break;
             case '*':
-                System.out.println("How many numbers you want to multiply \n");
+                System.out.print("\nHow many numbers you want to multiply");
                 int mulNums = sc.nextInt();
-                System.out.println("Enter the numbers");
+                System.out.print("\nEnter the numbers: ");
                 int mul = 1;
                 for (int i = 0; i < mulNums; i++) {
                     int num = sc.nextInt();
@@ -72,10 +92,10 @@ public class Main {
                 System.out.println("Multiplication: " + mul);
                 break;
             case '/':
-                System.out.println("How many numbers you want to divide \n");
+                System.out.print("\nHow many numbers you want to divide: ");
                 int divNums = sc.nextInt();
-                System.out.println("Enter the numbers");
-                int div = 0;
+                System.out.print("\nEnter the numbers: ");
+                int div = 1;
                 for (int i = 0; i < divNums; i++) {
                     int num = sc.nextInt();
                     div = div / num;
@@ -83,13 +103,13 @@ public class Main {
                 System.out.println("Divison: " + div);
                 break;
             case '%':
-                System.out.println("How many numbers you want to mod \n");
+                System.out.println("\nHow many numbers you want to mod: ");
                 int modNums = sc.nextInt();
-                System.out.println("Enter the numbers");
-                int mod = 0;
+                System.out.println("\nEnter the numbers: ");
+                int mod = 1;
                 for (int i = 0; i < modNums; i++) {
                     int num = sc.nextInt();
-                    mod = mod + num;
+                    mod = mod % num;
                 }
                 System.out.println("Modulus " + mod);
                 break;
