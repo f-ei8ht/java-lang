@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -68,16 +67,32 @@ public class Main {
                 }
                 break;
             case '-':
-                System.out.print("\nHow many numbers you want to subtract: ");
-                int subNums = sc.nextInt();
-                int[] subArray = new int[subNums];
-                if(subArray.length == 2) {
-                    System.out.println("\nEnter the numbers: ");
-                    for(int i = 0; i < subArray.length; i++) {
-                        subArray[i] = sc.nextInt();
+                while (true) {
+                    System.out.print("\nHow many numbers you want to subtract: ");
+                    if(sc.hasNextInt()) {
+                        int subNums = sc.nextInt();
+                        if(subNums > 1) {
+                            int[] subArray = new int[subNums];
+                            if(subArray.length == 2) {
+                                System.out.println("\nEnter the numbers: ");
+                                for(int i = 0; i < subArray.length; i++) {
+                                    while(!sc.hasNextInt()) {
+                                        System.out.println("This is not a valid integer");
+                                        sc.next();
+                                    }
+                                    subArray[i] = sc.nextInt();
+                                }
+                                System.out.println("Subtraction if, (a - b): " + (subArray[0] - subArray[1]));
+                                System.out.println("Subtraction if, (b - a): " + (subArray[1] - subArray[0]));
+                                break;
+                            }
+                        } else {
+                            System.out.println("Please enter and integer greater than 1");
+                        }
+                    } else {
+                        System.out.println("\nThis is not a valid integer.");
+                        sc.next();
                     }
-                    System.out.println("Subtraction if, (a - b): " + (subArray[0] - subArray[1]));
-                    System.out.println("Subtraction if, (b - a): " + (subArray[1] - subArray[0]));
                 }
                 break;
             case '*':
