@@ -10,8 +10,10 @@ public class Main {
 
         System.out.println("Welcome to CLI Calculator");
 
+//        boolean isValid = false;
+
         while (true) {
-            System.out.print("\nPlease Enter an operation (+ , - , * , / , %): ");
+            System.out.print("\nPlease Enter an operation (+ , - , * , / , %, p or P, r or R): ");
             String input = sc.next();
 
             char inputOperation = '\0';
@@ -175,15 +177,45 @@ public class Main {
 //                }
 //                System.out.println("Modulus " + mod);
 //                break;
-            case 'r':
-            case 'R':
+            case 'p':
+            case 'P':
                 while(true){
+                    System.out.println("\nPlease Enter accordingly number and power: ");
                     if(sc.hasNextInt()) {
-
+                        int n = sc.nextInt();
+                        int p = sc.nextInt();
+                        int num = 1;
+                        if(p == 0){
+                            System.out.println(n +" to the power " + p + "is 1");
+                        } else if (p % 2 == 0) {
+                            int newN = n;
+                            n = n * n;
+                            for(int i = 1; i <= Math.abs(p) / 2; i++) {
+                                num = num * n;
+                            }
+                            if(p < 0)
+                                System.out.println(newN + " to the power " + p + "is: " + (double) 1/ num);
+                            else
+                                System.out.println(newN + "to the power " +p+ "is: " + num);
+                        } else {
+                            int newN = n;
+                            int go = (Math.abs(p) - 1) / 2;
+                            n = n * n;
+                            for(int i = 1; i <= go; i++) {
+                                num = num * n;
+                            }
+                            if(p < 0)
+                                System.out.println(newN + " to the power " + p + " is: " + (double) 1/ num * ((double) 1/ newN));
+                            else
+                                System.out.println(newN + " to the power " + p + " is: " + newN * num);
+                        }
+                        break;
                     } else {
-                        System.out.println("Please enter a valid");
+                        System.out.println("Please enter a valid integer");
+                        sc.next();
                     }
                 }
+                break;
 
             default:
                 System.out.println("Unknow operation entered must be (+ , - , * , / , %) only");
