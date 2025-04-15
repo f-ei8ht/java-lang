@@ -69,25 +69,31 @@ public class Main {
             case '-':
                 while (true) {
                     System.out.print("\nHow many numbers you want to subtract: ");
-                    if(sc.hasNextInt()) {
+                    if (sc.hasNextInt()) {
                         int subNums = sc.nextInt();
-                        if(subNums > 1) {
+                        if (subNums > 1) {
                             int[] subArray = new int[subNums];
-                            if(subArray.length == 2) {
-                                System.out.println("\nEnter the numbers: ");
-                                for(int i = 0; i < subArray.length; i++) {
-                                    while(!sc.hasNextInt()) {
-                                        System.out.println("This is not a valid integer");
-                                        sc.next();
-                                    }
-                                    subArray[i] = sc.nextInt();
+                            System.out.println("\nEnter the numbers: ");
+                            for (int i = 0; i < subArray.length; i++) {
+                                while (!sc.hasNextInt()) {
+                                    System.out.println("This is not a valid integer");
+                                    sc.next();
                                 }
-                                System.out.println("Subtraction if, (a - b): " + (subArray[0] - subArray[1]));
-                                System.out.println("Subtraction if, (b - a): " + (subArray[1] - subArray[0]));
-                                break;
+                                subArray[i] = sc.nextInt();
                             }
+                            if (subArray.length == 2) {
+                                System.out.println("Subtraction if (a - b): " + (subArray[0] - subArray[1]));
+                                System.out.println("Subtraction if (b - a): " + (subArray[1] - subArray[0]));
+                            } else {
+                                int sub = subArray[0];
+                                for (int i = 1; i < subArray.length; i++) {
+                                    sub -= subArray[i];
+                                }
+                                System.out.println("Subtraction between " + subArray.length + " numbers: " + sub);
+                            }
+                            break;
                         } else {
-                            System.out.println("Please enter and integer greater than 1");
+                            System.out.println("Please enter an integer greater than 1");
                         }
                     } else {
                         System.out.println("\nThis is not a valid integer.");
@@ -96,38 +102,88 @@ public class Main {
                 }
                 break;
             case '*':
-                System.out.print("\nHow many numbers you want to multiply");
-                int mulNums = sc.nextInt();
-                System.out.print("\nEnter the numbers: ");
-                int mul = 1;
-                for (int i = 0; i < mulNums; i++) {
-                    int num = sc.nextInt();
-                    mul = mul * num;
+                while(true) {
+                    System.out.print("\nHow many numbers you want to multiply");
+                    if(sc.hasNextInt()) {
+                        int mulNums = sc.nextInt();
+                        if(mulNums > 1) {
+                            System.out.println("\nEnter the numbers: ");
+                            int mul = 1;
+                            for(int i = 0; i < mulNums; i++) {
+                                while(!sc.hasNextInt()) {
+                                    System.out.println("This is not a valid Integer");
+                                    sc.next();
+                                }
+                                int num = sc.nextInt();
+                                mul *= num;
+                            }
+                            System.out.println("Multiplication: " + mul);
+                            break;
+                        } else {
+                            System.out.println("\nPlease Enter an integer greater than 1");
+                        }
+                    } else {
+                        System.out.println("\nThis is not a valid integer");
+                        sc.next();
+                    }
                 }
-                System.out.println("Multiplication: " + mul);
                 break;
             case '/':
-                System.out.print("\nHow many numbers you want to divide: ");
-                int divNums = sc.nextInt();
-                System.out.print("\nEnter the numbers: ");
-                int div = 1;
-                for (int i = 0; i < divNums; i++) {
-                    int num = sc.nextInt();
-                    div = div / num;
+                while(true){
+                    System.out.print("\nHow many numbers you want to divide: ");
+                    if(sc.hasNextInt()){
+                        int divNums = sc.nextInt();
+                        if(divNums > 1) {
+                            int[] divArray = new int[divNums];
+                            System.out.println("\nEnter the numbers");
+                            for(int i = 0; i < divArray.length; i++) {
+                                while(!sc.hasNextInt()){
+                                    System.out.println("This is not a valid integer");
+                                    sc.next();
+                                }
+                                divArray[i] = sc.nextInt();
+                            }
+                            if(divArray.length == 2) {
+                                System.out.println("Division if (a/b): " + ((double)divArray[0] / (double)divArray[1]));
+                                System.out.println("Division if (b/a): " + ((double)divArray[1] / (double)divArray[0]));
+                            } else {
+                                double div = divArray[0];
+                                for(int i = 1; i < divArray.length; i++) {
+                                    div /= divArray[i];
+                                }
+                                System.out.println("Division of " + divArray.length + " numbers: " + div);
+                            }
+                            break;
+                        } else {
+                            System.out.println("\nPlease Enter a integer greater than 1");
+                        }
+                    } else {
+                        System.out.println("This is not a valid integer");
+                        sc.next();
+                    }
                 }
-                System.out.println("Divison: " + div);
                 break;
-            case '%':
-                System.out.println("\nHow many numbers you want to mod: ");
-                int modNums = sc.nextInt();
-                System.out.println("\nEnter the numbers: ");
-                int mod = 1;
-                for (int i = 0; i < modNums; i++) {
-                    int num = sc.nextInt();
-                    mod = mod % num;
+//            case '%':
+//                while(true)
+//                System.out.println("\nHow many numbers you want to mod: ");
+//                int modNums = sc.nextInt();
+//                System.out.println("\nEnter the numbers: ");
+//                int mod = 1;
+//                for (int i = 0; i < modNums; i++) {
+//                    int num = sc.nextInt();
+//                    mod = mod % num;
+//                }
+//                System.out.println("Modulus " + mod);
+//                break;
+            case 'r':
+            case 'R':
+                while(true){
+                    if(sc.hasNextInt()) {
+
+                    } else {
+                        System.out.println("Please enter a valid");
+                    }
                 }
-                System.out.println("Modulus " + mod);
-                break;
 
             default:
                 System.out.println("Unknow operation entered must be (+ , - , * , / , %) only");
