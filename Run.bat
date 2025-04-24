@@ -32,17 +32,19 @@ echo %RED%Error: File "%FILE_NAME%" not found in the project directory!%NC%
 exit /b 1
 
 :found
-:: Extract paths
+:: Extract directory and class name
 for %%a in ("%FILE_PATH%") do (
     set "DIR=%%~dpa"
     set "BASENAME=%%~na"
 )
 pushd "%ROOT_DIR%"
-set "RELATIVE_DIR=!FILE_PATH:%ROOT_DIR%\=!"
-set "RELATIVE_DIR=!RELATIVE_DIR:%FILE_NAME%=!"
-set "PACKAGE=!RELATIVE_DIR:\=.!."
-set "PACKAGE=!PACKAGE:.=!"
-set "PACKAGE=!PACKAGE:~0,-1!"
+
+:: Extract package from the Java file
+set "PACKAGE="
+for /f "tokens=2 delims= " %%p in ('findstr /C:"package " "%FILE_PATH%"') do (
+    set "PACKAGE=%%p"
+    set "PACKAGE=!PACKAGE:;=!"
+)
 
 :: Display file details
 echo %CYAN%==================== Running Java Program ====================%NC%
@@ -63,7 +65,7 @@ if errorlevel 1 (
 echo %GREEN%Compilation successful.%NC%
 echo %YELLOW%=============================================================%NC%
 
-:: Warning about temporary .class
+:: Inform about temporary .class file
 echo %BOLD%%YELLOW%==============================================================%NC%
 echo %BOLD%%YELLOW%   ATTENTION: A temporary .class file has been created.       %NC%
 echo %BOLD%%YELLOW%   Don't worry, it will be automatically deleted after execution.%NC%
@@ -72,10 +74,13 @@ echo %BOLD%%YELLOW%=============================================================
 :: Run
 echo %CYAN%==================== Executing Java Program ==================%NC%
 echo %CYAN%Executing Java program...%NC%
-if not "%PACKAGE%"=="." (
-    java "%PACKAGE%.%BASENAME%"
+
+if defined PACKAGE (
+    echo Running: java %PACKAGE%.%BASENAME%
+    java %PACKAGE%.%BASENAME%
 ) else (
-    java "%BASENAME%"
+    echo Running: java %BASENAME%
+    java -cp "%DIR%" "%BASENAME%"
 )
 echo %CYAN%=============================================================%NC%
 
@@ -83,8 +88,7 @@ echo %CYAN%=============================================================%NC%
 for %%c in ("%DIR%\%BASENAME%.class") do (
     if exist "%%c" (
         echo %YELLOW%==================== Deleting .class File ===================%NC%
-        echo %YELLOW%Deleting temporary .class file(s):%NC%
-        echo %CYAN%  %%~nxc%NC%
+        echo %YELLOW%Deleting temporary .class file: %%~nxc%NC%
         del /f /q "%%c"
         echo %GREEN%Temporary .class file removed. Your workspace is clean.%NC%
         echo %YELLOW%=============================================================%NC%
