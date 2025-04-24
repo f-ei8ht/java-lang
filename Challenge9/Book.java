@@ -1,27 +1,55 @@
 package Challenge9;
 
 public class Book {
+    static int totalBooks;
     String title;
     String author;
-    int isbn;
-    static int totalBooks;
+    String isbn;
     boolean isBorrowed;
-
-    Book(String author, String title, int isbn) {
-        this.author = author;
-        this.isbn = isbn;
-        this.title = title;
-    }
 
     static {
         totalBooks = 0;
     }
 
-    void borrowBook() {
+    {
+        totalBooks++;
+    }
 
+    Book(String author, String title, String isbn) {
+        this.author = author;
+        this.isbn = isbn;
+        this.title = title;
+    }
+
+    Book(String isbn) {
+        this(isbn, "Unknown", "Unknown");
+    }
+
+    static int getTotalBooks() {
+        return totalBooks;
+    }
+
+    void borrowBook() {
+        if (isBorrowed) {
+            System.out.println("Book is already borrowed");
+        } else {
+            this.isBorrowed = true;
+            System.out.println("Book borrowed");
+        }
     }
 
     void returnBook() {
+        if (isBorrowed) {
+            this.isBorrowed = false;
+            System.out.println("Book returned");
+        } else {
+            System.out.println("Book was not borrowed");
+        }
+    }
 
+    public static void main(String[] args) {
+        Book book = new Book("James clear", "Atomic habits", "1");
+        System.out.println(Book.getTotalBooks());
+        book.borrowBook();
     }
 }
