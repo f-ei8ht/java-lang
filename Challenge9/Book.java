@@ -49,7 +49,10 @@ public class Book {
 
     public static void main(String[] args) {
         Book book = new Book("James clear", "Atomic habits", "1");
+        Book book2 = new Book("2");
         System.out.println(Book.getTotalBooks());
         book.borrowBook();
+        book2.returnBook();
+        book.returnBook();
     }
 }
