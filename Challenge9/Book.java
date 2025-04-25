@@ -31,19 +31,19 @@ public class Book {
 
     void borrowBook() {
         if (isBorrowed) {
-            System.out.println("Book is already borrowed");
+            System.out.println("Book is already borrowed" + this.title);
         } else {
             this.isBorrowed = true;
-            System.out.println("Book borrowed");
+            System.out.println("Book borrowed" + this.title);
         }
     }
 
     void returnBook() {
         if (isBorrowed) {
             this.isBorrowed = false;
-            System.out.println("Book returned");
+            System.out.println("Book returned" + this.title);
         } else {
-            System.out.println("Book was not borrowed");
+            System.out.println("Book was not borrowed" + this.title);
         }
     }
 
@@ -54,5 +54,6 @@ public class Book {
         book.borrowBook();
         book2.returnBook();
         book.returnBook();
+
     }
 }
