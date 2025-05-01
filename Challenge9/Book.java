@@ -54,6 +54,6 @@ public class Book {
         book.borrowBook();
         book2.returnBook();
         book.returnBook();
-
+        book2.borrowBook();
     }
 }
