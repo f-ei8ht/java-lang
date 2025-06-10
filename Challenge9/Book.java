@@ -4,8 +4,8 @@ public class Book {
     static int totalBooks;
     String title;
     String author;
-    String isbn;
-    boolean isBorrowed;
+    int isbn;
+    boolean borrowBook = false;
 
     static {
         totalBooks = 0;
@@ -15,45 +15,54 @@ public class Book {
         totalBooks++;
     }
 
-    Book(String author, String title, String isbn) {
+    Book() {
+        title = "Unknown";
+        author = "Unknown";
+        isbn = 0;
+    }
+
+    Book(int isbn) {
+        this.isbn = isbn;
+        author = "Saad";
+        title = "rdr";
+    }
+
+    Book(String title, String author, int isbn) {
+        this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.title = title;
     }
 
-    Book(String isbn) {
-        this(isbn, "Unknown", "Unknown");
-    }
-
-    static int getTotalBooks() {
+    static int getTotalNoOfBooks() {
         return totalBooks;
     }
 
     void borrowBook() {
-        if (isBorrowed) {
-            System.out.println("Book is already borrowed" + this.title);
+        if (borrowBook) {
+            System.out.println("Book is already borrowed");
         } else {
-            this.isBorrowed = true;
-            System.out.println("Book borrowed" + this.title);
+            borrowBook = true;
+            System.out.println("Book borrowed");
         }
     }
 
     void returnBook() {
-        if (isBorrowed) {
-            this.isBorrowed = false;
-            System.out.println("Book returned" + this.title);
+        if (borrowBook) {
+            borrowBook = false;
+            System.out.println("book returned");
         } else {
-            System.out.println("Book was not borrowed" + this.title);
+            System.out.println("Book is not borrowed");
         }
     }
 
     public static void main(String[] args) {
-        Book book = new Book("James clear", "Atomic habits", "1");
-        Book book2 = new Book("2");
-        System.out.println(Book.getTotalBooks());
-        book.borrowBook();
-        book2.returnBook();
-        book.returnBook();
-        book2.borrowBook();
+        Book obj = new Book();
+        // obj.author = "Saif Ali Khan";
+        // // obj.title = "MC";
+        obj.isbn = 123;
+        obj.borrowBook();
+        System.out.println(obj.author + obj.title + obj.isbn);
+        System.out.println(getTotalNoOfBooks());
+        obj.returnBook();
     }
 }

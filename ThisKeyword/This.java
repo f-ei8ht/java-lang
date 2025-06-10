@@ -14,7 +14,8 @@ public class This {
     }
 
     public void addFuel(float fuel) {
-        currentFuel += fuel;
+        currentFuel += fuel; // either use like this
+        this.currentFuel += fuel; // or use like this it will be the same
     }
 
     public float getCurrentFuelLevel() {
