@@ -10,13 +10,11 @@ public class Main {
 
         System.out.println("Welcome to CLI Calculator");
 
-//        boolean isValid = false;
-
         while (true) {
             System.out.print("\nPlease Enter an operation (+ , - , * , / , %, p or P, r or R): ");
             String input = sc.next();
 
-            char inputOperation = '\0';
+            char inputOperation;
 
             if (input == null || input.isEmpty() || input.contains(" ")) {
                 System.out.println("Input cannot be null or empty or a whitespace");
@@ -165,18 +163,30 @@ public class Main {
                     }
                 }
                 break;
-//            case '%':
-//                while(true)
-//                System.out.println("\nHow many numbers you want to mod: ");
-//                int modNums = sc.nextInt();
-//                System.out.println("\nEnter the numbers: ");
-//                int mod = 1;
-//                for (int i = 0; i < modNums; i++) {
-//                    int num = sc.nextInt();
-//                    mod = mod % num;
-//                }
-//                System.out.println("Modulus " + mod);
-//                break;
+            case '%':
+                while(true){
+                    System.out.println("Enter two numbers you want to find mod for: ");
+                    if(sc.hasNextInt()) {
+                        int num1 = sc.nextInt();
+                        int num2 = sc.nextInt();
+                        if (num1 == 0 && num2 == 0) {
+                            System.out.println("Both Number cannot be zero");
+                            continue;
+                        } else {
+                            try {
+                                System.out.println("Mod num1%num2 is: " + num1 % num2);
+                                System.out.println("Mod num2%num1 is: " + num2 % num1);
+                            } catch (ArithmeticException e) {
+                                System.out.println("UNDEFINED if you mod something using 0");
+                            }
+                        }
+                        break;
+                    } else {
+                        System.out.println("Please enter a valid integer");
+                        sc.next();
+                    }
+                }
+                break;
             case 'p':
             case 'P':
                 while(true){
@@ -216,7 +226,33 @@ public class Main {
                     }
                 }
                 break;
-
+            case 'r':
+            case 'R':
+                while(true){
+                    System.out.println("\nPlease Enter the number to find square root of: ");
+                    if(sc.hasNextInt()) {
+                        int num = sc.nextInt();
+                        if(num == 0) {
+                            System.out.println("Square root of " + num + "is 0");
+                        } else {
+                            double total = 0.0001, root, X = num;
+                            while(true) {
+                                root = 0.5 * (X + (num/X));
+                                double ans = X - root;
+                                if(ans < total) {
+                                    break;
+                                }
+                                X = root;
+                            }
+                            System.out.println("Square root of " + num + "is " + String.format("%.3f", root));
+                            break;
+                        }
+                    } else {
+                        System.out.println("Please enter a valid integer");
+                        sc.next();
+                    }
+                }
+                break;
             default:
                 System.out.println("Unknow operation entered must be (+ , - , * , / , %) only");
                 break;
