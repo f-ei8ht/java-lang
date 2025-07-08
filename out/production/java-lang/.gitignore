@@ -1,0 +1,6 @@
+# Ignore all compiled class files
+*.class
+
+# Ignore .vscode folder specifically in Calculator directory
+.vscode
+
