@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba997ede-1a8e-4413-9d18-1f5a5398f605" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Access Modifiers/one/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-lang/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-lang/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +39,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Bank.executor": "Run",
+    "Application.BufferReader.executor": "Run",
+    "Application.Calculator.executor": "Run",
     "Application.Dog.executor": "Run",
+    "Application.Id.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.StringTo.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
@@ -63,19 +71,6 @@
       <recent name="C:\Users\saif7\Desktop\java-lang\Inheritance\animal" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="java-lang" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="java-lang" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -93,7 +88,9 @@
       <updated>1751659949972</updated>
       <workItem from="1751659953521" duration="3645000" />
       <workItem from="1751982523321" duration="168000" />
-      <workItem from="1751982701954" duration="7460000" />
+      <workItem from="1751982701954" duration="8132000" />
+      <workItem from="1752009127441" duration="26000" />
+      <workItem from="1752181515930" duration="5418000" />
     </task>
     <servers />
   </component>
